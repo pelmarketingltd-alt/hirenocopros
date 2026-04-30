@@ -1,0 +1,8 @@
+# HireNocoPro — robots.txt
+# Instructs search engines on how to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://hirenocopro.com/sitemap.xml
