@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 100" width="480" height="100" role="img" aria-label="HireNocoPro logo white">
+  <!-- Monogram badge -->
+  <g transform="translate(0, 18)">
+    <rect x="0" y="0" width="64" height="64" rx="18" fill="#FFFFFF"/>
+    <text x="32" y="46" text-anchor="middle"
+          font-family="Fraunces, Georgia, serif"
+          font-weight="900" font-size="34" fill="#FF6B35"
+          letter-spacing="-1">HP</text>
+  </g>
+  <!-- Wordmark -->
+  <g transform="translate(82, 68)">
+    <text x="0" y="0"
+          font-family="Fraunces, Georgia, serif"
+          font-weight="900" font-size="52" letter-spacing="-1.5"
+          fill="#FFFFFF">HireNoco</text>
+    <text x="240" y="0"
+          font-family="Fraunces, Georgia, serif"
+          font-weight="900" font-size="52" letter-spacing="-1.5"
+          fill="#FF6B35">Pro</text>
+    <circle cx="345" cy="-44" r="6" fill="#FF6B35"/>
+  </g>
+</svg>

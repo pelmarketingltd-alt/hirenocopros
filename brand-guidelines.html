@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HireNocoPro — Brand Guidelines</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FDFAF4;
+    --orange: #FF6B35;
+    --orange-light: #FFF0EA;
+    --orange-mid: #FF8E5C;
+    --teal: #0D9488;
+    --teal-light: #CCFBF1;
+    --navy: #1E1B4B;
+    --grey: #6B7280;
+    --grey-light: #F3F4F6;
+    --white: #FFFFFF;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'DM Sans',sans-serif; background:var(--cream); color:var(--navy); line-height:1.6; }
+
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #312E81 100%);
+    color: white;
+    padding: 80px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content:''; position:absolute; top:-100px; right:-100px;
+    width:300px; height:300px; background:var(--orange);
+    border-radius:50%; opacity:0.15;
+  }
+  .hero::after {
+    content:''; position:absolute; bottom:-80px; left:-60px;
+    width:240px; height:240px; background:var(--teal);
+    border-radius:50%; opacity:0.12;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .hero h1 em { font-style: normal; color: var(--orange); }
+  .hero p { font-size: 18px; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto; position: relative; }
+
+  .section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 40px;
+  }
+  .section-eyebrow {
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  .section h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 12px;
+    color: var(--navy);
+  }
+  .section p.lead {
+    color: var(--grey);
+    font-size: 17px;
+    margin-bottom: 40px;
+    max-width: 700px;
+  }
+
+  /* LOGO SHOWCASE */
+  .showcase-grid { display: grid; gap: 24px; margin-bottom: 24px; }
+  .showcase-2 { grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); }
+  .showcase-3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .showcase-card {
+    background: white;
+    border-radius: 18px;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(30,27,75,0.06);
+    transition: all 0.25s;
+  }
+  .showcase-card.dark { background: var(--navy); }
+  .showcase-card.orange { background: var(--orange); }
+  .showcase-card.cream { background: var(--cream); border: 2px solid var(--orange-light); }
+  .showcase-display {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .showcase-display img { max-width: 100%; max-height: 100px; }
+  .showcase-label {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--navy);
+  }
+  .dark .showcase-label, .orange .showcase-label { color: white; }
+  .showcase-desc { font-size: 13px; color: var(--grey); }
+  .dark .showcase-desc, .orange .showcase-desc { color: rgba(255,255,255,0.7); }
+
+  /* COLOUR SWATCHES */
+  .color-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .color-swatch {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(30,27,75,0.06);
+  }
+  .color-display {
+    height: 140px;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+  }
+  .color-info { padding: 18px 20px; }
+  .color-name {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .color-hex {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: var(--grey);
+    margin-bottom: 8px;
+  }
+  .color-rgb { font-size: 11px; color: var(--grey); font-family: 'Courier New', monospace; }
+  .color-tag {
+    display: inline-block;
+    background: var(--cream);
+    color: var(--navy);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 8px;
+  }
+
+  /* TYPOGRAPHY */
+  .type-card {
+    background: white;
+    border-radius: 18px;
+    padding: 40px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(30,27,75,0.06);
+  }
+  .type-name {
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    color: var(--orange);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+  .type-sample {
+    font-family: 'Fraunces', serif;
+    font-size: 56px;
+    font-weight: 900;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+  }
+  .type-sample-2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #374151;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .type-meta {
+    display: flex;
+    gap: 32px;
+    font-size: 13px;
+    color: var(--grey);
+    flex-wrap: wrap;
+  }
+  .type-meta strong { color: var(--navy); }
+  .type-weights {
+    display: flex;
+    gap: 16px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--grey-light);
+    flex-wrap: wrap;
+  }
+  .weight-sample {
+    font-size: 14px;
+    color: var(--navy);
+  }
+
+  /* DO / DONT */
+  .rules-grid { display: grid; gap: 20px; grid-template-columns: 1fr 1fr; }
+  .rule-card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(30,27,75,0.06);
+  }
+  .rule-do { border-top: 4px solid var(--teal); }
+  .rule-dont { border-top: 4px solid #DC2626; }
+  .rule-tag {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+  }
+  .rule-do .rule-tag { color: var(--teal); }
+  .rule-dont .rule-tag { color: #DC2626; }
+  .rule-card ul { list-style: none; padding: 0; margin: 0; }
+  .rule-card li {
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--grey-light);
+    font-size: 14px;
+    color: #374151;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .rule-card li:last-child { border-bottom: none; }
+  .rule-do li::before { content: '✓'; color: var(--teal); font-weight: 700; }
+  .rule-dont li::before { content: '✗'; color: #DC2626; font-weight: 700; }
+
+  /* FAVICON GRID */
+  .fav-grid { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; justify-content: center; }
+  .fav-demo { text-align: center; }
+  .fav-demo .img-wrap {
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 4px 20px rgba(30,27,75,0.08);
+    margin-bottom: 8px;
+    display: inline-block;
+  }
+  .fav-demo .img-wrap img { display: block; }
+  .fav-demo .label { font-size: 12px; color: var(--grey); font-weight: 600; }
+
+  /* FILES SECTION */
+  .files-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .file-card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 12px rgba(30,27,75,0.04);
+    transition: all 0.2s;
+  }
+  .file-card:hover { border-color: var(--orange); }
+  .file-icon {
+    width: 44px; height: 44px;
+    background: var(--orange-light);
+    color: var(--orange);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+  .file-name { font-size: 14px; font-weight: 700; color: var(--navy); }
+  .file-desc { font-size: 12px; color: var(--grey); margin-top: 2px; }
+
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.7);
+    padding: 40px;
+    text-align: center;
+    font-size: 13px;
+  }
+  footer strong { color: white; font-family: 'Fraunces', serif; }
+
+  @media (max-width: 700px) {
+    .section { padding: 50px 20px; }
+    .rules-grid { grid-template-columns: 1fr; }
+    .showcase-card { padding: 30px 20px; }
+    .type-sample { font-size: 38px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-eyebrow">BRAND GUIDELINES</div>
+  <h1>HireNoco<em>Pro</em></h1>
+  <p>The complete brand identity system — logos, colours, typography and rules.</p>
+</div>
+
+<!-- ═══════ LOGO ═══════ -->
+<div class="section">
+  <div class="section-eyebrow">01 — THE LOGO</div>
+  <h2>Our brand mark</h2>
+  <p class="lead">A bold serif wordmark paired with a friendly monogram badge. The orange "Pro" emphasises our promise: professional, vetted talent. The blip is our signature flourish.</p>
+
+  <div class="showcase-grid showcase-2">
+    <div class="showcase-card">
+      <div class="showcase-display">
+        <img src="logo-primary.svg" alt="Primary logo">
+      </div>
+      <div class="showcase-label">Primary Logo</div>
+      <div class="showcase-desc">For light backgrounds, marketing materials, the website header.</div>
+    </div>
+
+    <div class="showcase-card dark">
+      <div class="showcase-display">
+        <img src="logo-white.svg" alt="Logo on dark">
+      </div>
+      <div class="showcase-label">Dark Background</div>
+      <div class="showcase-desc">For dark themes, footers, social media banners.</div>
+    </div>
+  </div>
+
+  <div class="showcase-grid showcase-3">
+    <div class="showcase-card cream">
+      <div class="showcase-display">
+        <img src="logo-wordmark.svg" alt="Wordmark only" style="max-height:80px;">
+      </div>
+      <div class="showcase-label">Wordmark Only</div>
+      <div class="showcase-desc">When space is limited or used alongside the icon.</div>
+    </div>
+
+    <div class="showcase-card cream">
+      <div class="showcase-display">
+        <img src="logo-square.svg" alt="Monogram" style="max-height:120px;">
+      </div>
+      <div class="showcase-label">Square Monogram</div>
+      <div class="showcase-desc">For social media, app icons, profile pictures.</div>
+    </div>
+
+    <div class="showcase-card cream">
+      <div class="showcase-display">
+        <img src="favicon.svg" alt="Favicon" style="max-height:64px;">
+      </div>
+      <div class="showcase-label">Favicon</div>
+      <div class="showcase-desc">Browser tabs, bookmarks. Optimised for tiny sizes.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ COLOUR ═══════ -->
+<div class="section" style="background:white;">
+  <div class="section-eyebrow">02 — COLOUR PALETTE</div>
+  <h2>Our colours</h2>
+  <p class="lead">Cream backgrounds for warmth, orange for energy and CTA, navy for trust and professionalism. Teal accents for highlights and badges.</p>
+
+  <div class="color-grid">
+    <div class="color-swatch">
+      <div class="color-display" style="background:#FF6B35;">
+        <span style="color:white;font-family:Fraunces,serif;font-weight:900;font-size:24px;">Aa</span>
+      </div>
+      <div class="color-info">
+        <div class="color-name">Sunset Orange</div>
+        <div class="color-hex">#FF6B35</div>
+        <div class="color-rgb">RGB 255, 107, 53</div>
+        <span class="color-tag">PRIMARY · CTA</span>
+      </div>
+    </div>
+
+    <div class="color-swatch">
+      <div class="color-display" style="background:#1E1B4B;">
+        <span style="color:white;font-family:Fraunces,serif;font-weight:900;font-size:24px;">Aa</span>
+      </div>
+      <div class="color-info">
+        <div class="color-name">Midnight Navy</div>
+        <div class="color-hex">#1E1B4B</div>
+        <div class="color-rgb">RGB 30, 27, 75</div>
+        <span class="color-tag">TEXT · TRUST</span>
+      </div>
+    </div>
+
+    <div class="color-swatch">
+      <div class="color-display" style="background:#FDFAF4;">
+        <span style="color:#1E1B4B;font-family:Fraunces,serif;font-weight:900;font-size:24px;">Aa</span>
+      </div>
+      <div class="color-info">
+        <div class="color-name">Warm Cream</div>
+        <div class="color-hex">#FDFAF4</div>
+        <div class="color-rgb">RGB 253, 250, 244</div>
+        <span class="color-tag">BACKGROUND</span>
+      </div>
+    </div>
+
+    <div class="color-swatch">
+      <div class="color-display" style="background:#0D9488;">
+        <span style="color:white;font-family:Fraunces,serif;font-weight:900;font-size:24px;">Aa</span>
+      </div>
+      <div class="color-info">
+        <div class="color-name">Trust Teal</div>
+        <div class="color-hex">#0D9488</div>
+        <div class="color-rgb">RGB 13, 148, 136</div>
+        <span class="color-tag">ACCENT · BADGES</span>
+      </div>
+    </div>
+
+    <div class="color-swatch">
+      <div class="color-display" style="background:#FF8E5C;">
+        <span style="color:white;font-family:Fraunces,serif;font-weight:900;font-size:24px;">Aa</span>
+      </div>
+      <div class="color-info">
+        <div class="color-name">Soft Coral</div>
+        <div class="color-hex">#FF8E5C</div>
+        <div class="color-rgb">RGB 255, 142, 92</div>
+        <span class="color-tag">GRADIENT</span>
+      </div>
+    </div>
+
+    <div class="color-swatch">
+      <div class="color-display" style="background:#6B7280;">
+        <span style="color:white;font-family:Fraunces,serif;font-weight:900;font-size:24px;">Aa</span>
+      </div>
+      <div class="color-info">
+        <div class="color-name">Slate Grey</div>
+        <div class="color-hex">#6B7280</div>
+        <div class="color-rgb">RGB 107, 114, 128</div>
+        <span class="color-tag">SECONDARY TEXT</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ TYPOGRAPHY ═══════ -->
+<div class="section">
+  <div class="section-eyebrow">03 — TYPOGRAPHY</div>
+  <h2>Our typefaces</h2>
+  <p class="lead">A modern serif for personality and warmth, paired with a clean sans-serif for clarity. Both are free, web-friendly fonts from Google Fonts.</p>
+
+  <div class="type-card">
+    <div class="type-name">Headings · Logo · Display</div>
+    <div class="type-sample">Fraunces — Build smarter</div>
+    <div class="type-meta">
+      <div><strong>Family:</strong> Fraunces</div>
+      <div><strong>Style:</strong> Modern serif with character</div>
+      <div><strong>Source:</strong> Google Fonts (free)</div>
+      <div><strong>Use for:</strong> H1, H2, H3, Logo, Display text</div>
+    </div>
+    <div class="type-weights">
+      <div class="weight-sample" style="font-family:Fraunces;font-weight:400;font-size:18px;">Regular 400</div>
+      <div class="weight-sample" style="font-family:Fraunces;font-weight:600;font-size:18px;">Semi 600</div>
+      <div class="weight-sample" style="font-family:Fraunces;font-weight:700;font-size:18px;">Bold 700</div>
+      <div class="weight-sample" style="font-family:Fraunces;font-weight:900;font-size:18px;">Black 900</div>
+    </div>
+  </div>
+
+  <div class="type-card">
+    <div class="type-name">Body · UI · Buttons</div>
+    <div class="type-sample-2">DM Sans — Clean, readable, friendly. Perfect for body copy, buttons, navigation, and interface elements.</div>
+    <div class="type-meta">
+      <div><strong>Family:</strong> DM Sans</div>
+      <div><strong>Style:</strong> Modern geometric sans</div>
+      <div><strong>Source:</strong> Google Fonts (free)</div>
+      <div><strong>Use for:</strong> Body, buttons, nav, forms, captions</div>
+    </div>
+    <div class="type-weights">
+      <div class="weight-sample" style="font-family:'DM Sans';font-weight:400;font-size:16px;">Regular 400</div>
+      <div class="weight-sample" style="font-family:'DM Sans';font-weight:500;font-size:16px;">Medium 500</div>
+      <div class="weight-sample" style="font-family:'DM Sans';font-weight:600;font-size:16px;">Semi 600</div>
+      <div class="weight-sample" style="font-family:'DM Sans';font-weight:700;font-size:16px;">Bold 700</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ FAVICON ═══════ -->
+<div class="section" style="background:white;">
+  <div class="section-eyebrow">04 — FAVICON</div>
+  <h2>Browser tab icon</h2>
+  <p class="lead">The favicon shows in browser tabs, bookmarks and search results. Available in multiple sizes for different platforms.</p>
+
+  <div class="fav-grid">
+    <div class="fav-demo">
+      <div class="img-wrap" style="padding:8px;"><img src="favicon-16.png" width="16" height="16" alt="16px"></div>
+      <div class="label">16 × 16<br>Browser tab</div>
+    </div>
+    <div class="fav-demo">
+      <div class="img-wrap" style="padding:10px;"><img src="favicon-32.png" width="32" height="32" alt="32px"></div>
+      <div class="label">32 × 32<br>Bookmark</div>
+    </div>
+    <div class="fav-demo">
+      <div class="img-wrap" style="padding:14px;"><img src="favicon-192.png" width="64" height="64" alt="192px"></div>
+      <div class="label">192 × 192<br>Android</div>
+    </div>
+    <div class="fav-demo">
+      <div class="img-wrap" style="padding:18px;"><img src="favicon-512.png" width="100" height="100" alt="512px"></div>
+      <div class="label">512 × 512<br>iOS / PWA</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ DO / DONT ═══════ -->
+<div class="section">
+  <div class="section-eyebrow">05 — USAGE RULES</div>
+  <h2>Do's and don'ts</h2>
+  <p class="lead">Keep the brand consistent. These rules ensure HireNocoPro is always recognisable and professional.</p>
+
+  <div class="rules-grid">
+    <div class="rule-card rule-do">
+      <div class="rule-tag">✓ DO</div>
+      <ul>
+        <li>Use the orange "Pro" — it's our signature emphasis</li>
+        <li>Maintain at least 16px of clear space around the logo</li>
+        <li>Use SVG version online for crispness at any size</li>
+        <li>Keep the orange-to-coral gradient direction consistent</li>
+        <li>Pair Fraunces (headlines) with DM Sans (body)</li>
+        <li>Use the navy logo on light backgrounds, white on dark</li>
+        <li>Apply our cream (#FDFAF4) as the default background</li>
+      </ul>
+    </div>
+    <div class="rule-card rule-dont">
+      <div class="rule-tag">✗ DON'T</div>
+      <ul>
+        <li>Don't change the colour of "Pro" — orange is sacred</li>
+        <li>Don't stretch, skew, or distort the logo</li>
+        <li>Don't add drop shadows, outlines, or 3D effects</li>
+        <li>Don't place the logo on busy or low-contrast backgrounds</li>
+        <li>Don't substitute Fraunces with other serifs (Times, etc.)</li>
+        <li>Don't use the wordmark and monogram together side by side</li>
+        <li>Don't recolour the favicon — keep it solid orange</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ FILES ═══════ -->
+<div class="section" style="background:white;">
+  <div class="section-eyebrow">06 — FILES INCLUDED</div>
+  <h2>Your asset library</h2>
+  <p class="lead">Everything you need to use the brand correctly across web, social, and print.</p>
+
+  <div class="files-grid">
+    <div class="file-card"><div class="file-icon">SVG</div><div><div class="file-name">logo-primary.svg</div><div class="file-desc">Main logo, scalable, web-ready</div></div></div>
+    <div class="file-card"><div class="file-icon">SVG</div><div><div class="file-name">logo-white.svg</div><div class="file-desc">White version for dark backgrounds</div></div></div>
+    <div class="file-card"><div class="file-icon">SVG</div><div><div class="file-name">logo-wordmark.svg</div><div class="file-desc">Text only, no monogram</div></div></div>
+    <div class="file-card"><div class="file-icon">SVG</div><div><div class="file-name">logo-square.svg</div><div class="file-desc">Social profile picture</div></div></div>
+    <div class="file-card"><div class="file-icon">PNG</div><div><div class="file-name">logo-primary.png</div><div class="file-desc">2x retina raster version</div></div></div>
+    <div class="file-card"><div class="file-icon">PNG</div><div><div class="file-name">logo-square.png</div><div class="file-desc">512×512 social-ready</div></div></div>
+    <div class="file-card"><div class="file-icon">SVG</div><div><div class="file-name">favicon.svg</div><div class="file-desc">Modern browsers</div></div></div>
+    <div class="file-card"><div class="file-icon">ICO</div><div><div class="file-name">favicon.ico</div><div class="file-desc">Multi-size, all browsers</div></div></div>
+    <div class="file-card"><div class="file-icon">PNG</div><div><div class="file-name">favicon-16.png</div><div class="file-desc">Standard browser tab</div></div></div>
+    <div class="file-card"><div class="file-icon">PNG</div><div><div class="file-name">favicon-32.png</div><div class="file-desc">Bookmark size</div></div></div>
+    <div class="file-card"><div class="file-icon">PNG</div><div><div class="file-name">favicon-192.png</div><div class="file-desc">Android home screen</div></div></div>
+    <div class="file-card"><div class="file-icon">PNG</div><div><div class="file-name">favicon-512.png</div><div class="file-desc">iOS / PWA / app stores</div></div></div>
+  </div>
+</div>
+
+<footer>
+  <strong>HireNocoPro</strong> · Brand Guidelines · Prepared April 2026<br>
+  © 2025 PEL Marketing Ltd · All rights reserved
+</footer>
+
+</body>
+</html>

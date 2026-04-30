@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="HireNocoPro monogram">
+  <defs>
+    <linearGradient id="hncpSquare" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#FF8E5C"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="url(#hncpSquare)"/>
+  <text x="256" y="340" text-anchor="middle"
+        font-family="Fraunces, Georgia, serif"
+        font-weight="900" font-size="280" letter-spacing="-10"
+        fill="#FFFFFF">HP</text>
+  <circle cx="395" cy="155" r="22" fill="#FFFFFF" opacity="0.9"/>
+</svg>

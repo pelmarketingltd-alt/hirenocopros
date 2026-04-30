@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 100" width="480" height="100" role="img" aria-label="HireNocoPro logo">
+  <defs>
+    <linearGradient id="hncpGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#FF8E5C"/>
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@900&amp;display=swap');
+      .hncp-text { font-family: 'Fraunces', Georgia, serif; font-weight: 900; font-size: 52px; letter-spacing: -1.5px; }
+      .hncp-dark { fill: #1E1B4B; }
+      .hncp-orange { fill: #FF6B35; }
+    </style>
+  </defs>
+
+  <!-- Monogram badge -->
+  <g transform="translate(0, 18)">
+    <rect x="0" y="0" width="64" height="64" rx="18" fill="url(#hncpGradient)"/>
+    <text x="32" y="46" text-anchor="middle"
+          font-family="Fraunces, Georgia, serif"
+          font-weight="900" font-size="34" fill="#FFFFFF"
+          letter-spacing="-1">HP</text>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(82, 68)">
+    <text class="hncp-text hncp-dark" x="0" y="0">HireNoco</text>
+    <text class="hncp-text hncp-orange" x="240" y="0">Pro</text>
+    <!-- Little blip dot -->
+    <circle cx="345" cy="-44" r="6" fill="#FF6B35"/>
+  </g>
+</svg>
